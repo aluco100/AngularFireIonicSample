@@ -7,8 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ul>
+    <li class="text" *ngFor="let item of items">
+      {{item}}
+    </li>
+  </ul>
+  <ion-input type="text" [(ngModel)]="itemName" placeholder="nombre"
+             style="border: 2px solid #ccc; corner-radius:2px;"></ion-input>
+  <button ion-button (click)="addItem()">Agregar item</button>
 </ion-content>
